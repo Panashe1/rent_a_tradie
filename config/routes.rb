@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   resources :services do
     resources :bookings, only: [:new, :create]
-
   end
   resources :bookings, only: [:destroy]
 end
