@@ -1,0 +1,11 @@
+<ul class = "services-list">
+  <% services.each do |service| %>
+    <li class = "service-item">
+      <p><%= service.title %><p>
+      <p><%= service.description %><p>
+      <p><%= service.cost %><p>
+      <p><%= service.average_rating %><p>
+      <p><%= service.category %><p>
+     </li>
+      <% end  %>
+</ul>

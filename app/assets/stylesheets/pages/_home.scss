@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+
+
+/* --- CARDS LAYOUT --- */
+.services-list {
+  padding: 0;
+  margin: 30px;
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.service-item {
+  border: 1px solid black;
+}
