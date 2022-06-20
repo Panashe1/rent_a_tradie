@@ -14,7 +14,7 @@
 }
 
 .show-image {
-  height: 600px;
+  height: 500px;
   border: 3px solid lightgray;
   padding: 4px;
 }
@@ -38,7 +38,6 @@
 .centered-show {
   text-align: center;
   justify-content: center;
-
 }
 
 .show-container {
@@ -46,6 +45,23 @@
 }
 
 .bg-show {
-  background: linear-gradient(to bottom, #3DA9FC 0%, #3DA9FC 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%  );
-  border-radius: 8px ;
+  background: linear-gradient(
+    to bottom,
+    #3da9fc 0%,
+    #3da9fc 50%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: 8px;
+}
+
+.fa-star {
+  color: black;
+}
+
+.roadmap {
+  background-repeat: no-repeat;
+  background-image: url(roadmap.png);
+  background-size: cover;
+  opacity: 70%;
 }
