@@ -1,11 +1,16 @@
 <ul class = "services-list">
   <% services.each do |service| %>
     <li class = "service-item">
-      <p><%= service.title %><p>
-      <p><%= service.description %><p>
-      <p><%= service.cost %><p>
-      <p><%= service.average_rating %><p>
-      <p><%= service.category %><p>
+      <div class = "service-image"></div>
+      <div class = "service-title"><%= service.title %></div>
+      <div class = "service-category"><%= service.category %></div>
+      <div class = "service-info">
+        <div class = "serivce-cost">$<%= service.cost %></div>
+        <div class = "serivce-rating"><%= service.average_rating %></div>
+      </div>
+      <i class="fa-thin fa-plus"></i>
+      <a href = '#'>
+      </a>
      </li>
       <% end  %>
 </ul>

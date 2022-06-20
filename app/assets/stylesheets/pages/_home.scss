@@ -7,10 +7,38 @@
   margin: 30px;
   display: grid;
   list-style: none;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 30px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .service-item {
   border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color:#fde047;
+}
+
+.service-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+.service-title {
+  font-size: 23px;
+}
+
+.service-category {
+}
+.service-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
