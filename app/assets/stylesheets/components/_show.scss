@@ -1,0 +1,51 @@
+.show-heading {
+  color: white;
+  font-size: 4rem;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-container hr {
+  color: white;
+  background-color: white;
+  margin-top: 36px;
+}
+
+.show-image {
+  height: 600px;
+  border: 3px solid lightgray;
+  padding: 4px;
+}
+
+.show-image-sm {
+  height: 300px;
+  border: 3px solid lightgray;
+  padding: 4px;
+}
+
+.img-pill {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.flex-inline {
+  display: inline-block;
+}
+
+.centered-show {
+  text-align: center;
+  justify-content: center;
+
+}
+
+.show-container {
+  position: relative;
+}
+
+.bg-show {
+  background: linear-gradient(to bottom, #3DA9FC 0%, #3DA9FC 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%  );
+  border-radius: 8px ;
+}
