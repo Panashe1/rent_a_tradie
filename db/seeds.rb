@@ -1,6 +1,10 @@
 
 puts "Creating seeds"
 Service.destroy_all
+
+User.create(
+  email: "test@gmail.com",
+  password: 'password')
 15.times do
   Service.create(
     title: Faker::Company.name,
