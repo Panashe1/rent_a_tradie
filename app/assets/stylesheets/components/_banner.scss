@@ -1,11 +1,15 @@
 .banner{
-  background-color: $light-gray;
+  // background-color: $light-gray;
 
+  background-color: #060608;
+  background-image: linear-gradient(225deg, #060608 0%, #16161a 30%, #151516 66%, #ffffff 100%);
 
   img{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 400px;
+    width: 100%;
+    overflow: visible;
+    border-radius: 3px;
   }
 }
