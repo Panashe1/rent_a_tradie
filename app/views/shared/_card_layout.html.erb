@@ -13,10 +13,11 @@
         <%= service.average_rating %>
         </div>
       </div>
-      <a href = '#' class = "add-booking-btn">
+
+      <%= link_to service_path(service), class: "add-booking-btn" do %>
         <i class="fa fa-solid fa-plus"></i>
         <div class = "booking-txt">Booking</div>
-      </a>
+        <% end %>
      </li>
-      <% end  %>
+  <% end %>
 </ul>
