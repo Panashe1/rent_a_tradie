@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/:id' => 'users#show'
   get 'bookings/new'
   get 'bookings/create'
   get 'bookings/destroy'
