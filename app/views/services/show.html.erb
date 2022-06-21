@@ -1,34 +1,36 @@
 <div class="show-container row bg-show">
   <%= render "shared/heading" %>
-  <div class="col">
+  <div class="col-8">
     <%= render "shared/pill_sm" %>
   </div>
+  <div class='col align-self-end'>
+    <div class="card">
+      <div class="card-header">
+        Quote
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>A well-known quote, reliable local for all your around the house jobs.</p>
+          <footer class="blockquote-footer">Local Tradie <cite title="Source Title"><%= @service.title %></cite></footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
 </div>
+<hr>
 <div class='row'>
   <div class='col-6'>
-    <h2 class='mt-2'><i class="fas fa-tools"></i>Subtitle</h2>
+    <h2 class='mt-2'><i class="fas fa-tools"></i><%= @service.title %></h2>
     <p class='text-wrap' style="width: 15rem;">Come take a look! at John now!, he has a number of services available from general handyman to full bathroom makeovers! </p>
+    <p class='text-wrap' style="width: 15rem;">Average cost: $<%= @service.cost %> </p>
   </div>
   <div class='col mt-2 border py-3'>
-    <form>
-      <h1 class="h3 mb-3 fw-normal">Make contact now</h1>
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Preferred Start Date</label>
-      </div>
-      <div class="form-floating">
-        <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Comment</label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Book Now</button>
-      <p class="mt-5 mb-3 text-muted">© 2017–2022</p>
-    </form>
+    <%= simple_form_for new_service_booking_path(@service.id), method: :post do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.input :comment %>
+      <%= f.submit "Book Now", class: "btn btn-primary" %>
+    <%end %>
   </div>
 </div>
 </div>
-<%#= simple_form_for [@service, @booking] do |f| %>
-  <%#= f.input :start_date %>
-  <%#= f.input :end_date %>
-  <%#= f.input :comment %>
-  <%#= f.submit "Book Now", class: "btn btn-primary" %>
-  <%#end %>

@@ -1,13 +1,11 @@
 class BookingsController < ApplicationController
   def new
     @service = Service.find(params[:service_id])
-    @user = User.find(params[:user_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
-    @service = Service.find(params[:service_id])
     @booking.service = @service
     if @booking.save
       redirect_to root_path
@@ -17,5 +15,11 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :comment, :user_id)
   end
 end
