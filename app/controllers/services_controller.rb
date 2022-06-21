@@ -2,8 +2,6 @@ class ServicesController < ApplicationController
 
   def new
     @service = Service.new
-    @booking = Booking.new
-
   end
 
   def create
@@ -17,6 +15,7 @@ class ServicesController < ApplicationController
 
   def show
     find_service
+    @booking = Booking.new
   end
 
   def edit
