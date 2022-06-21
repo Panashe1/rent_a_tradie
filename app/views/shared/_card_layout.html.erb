@@ -1,0 +1,22 @@
+<ul class = "services-list">
+  <% services.each do |service| %>
+    <li class = "service-item">
+      <div class = "service-image"></div>
+      <div class = "service-header">
+        <div class = "service-title"><%= service.title %></div>
+        <div class = "service-category"><%= service.category %></div>
+      </div>
+      <div class = "service-info">
+        <div class = "serivce-cost">$<%= service.cost %></div>
+        <div class = "serivce-rating">
+        <i class="fa fa-solid fa-star"></i>
+        <%= service.average_rating %>
+        </div>
+      </div>
+      <a href = '#' class = "add-booking-btn">
+        <i class="fa fa-solid fa-plus"></i>
+        <div class = "booking-txt">Booking</div>
+      </a>
+     </li>
+      <% end  %>
+</ul>
