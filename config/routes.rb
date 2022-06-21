@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'users/:id' => 'users#show'
   get 'bookings/new'
   get 'bookings/create'
   get 'bookings/destroy'
   devise_for :users
+  get 'users/:id' => 'users#show'
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
