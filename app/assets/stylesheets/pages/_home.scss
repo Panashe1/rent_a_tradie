@@ -8,37 +8,74 @@
   display: grid;
   list-style: none;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: 290px;
   gap: 30px;
   font-family: 'Roboto', sans-serif;
 }
 
 .service-item {
-  border: 1px solid black;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  background-color:#fde047;
+  padding: 20px 15px;
+  background-color: #d4d4d4;
+  transition: all 0.5s;
+}
+
+.service-item:hover {
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
 }
 
 .service-image {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background-color: black;
+  background-color: white;
 }
 
 .service-title {
-  font-size: 23px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .service-category {
+  font-size: 12px;
+  text-align: center;
 }
+
 .service-info {
   display: flex;
   justify-content: center;
   gap: 20px;
   width: 100%;
+}
+
+.add-booking-btn {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  color: black;
+  transition: background-color 0.2s ease-in-out;
+
+}
+
+.add-booking-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.fa-plus {
+  transition: transform 0.6s;
+}
+
+.add-booking-btn:hover .fa-plus {
+  transform: rotate(180deg);
 }
