@@ -5,6 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def create
+    @service = Service.find(params[:service_id])
     @booking = Booking.new(booking_params)
     @booking.service = @service
     if @booking.save
