@@ -1,0 +1,7 @@
+   <%= simple_form_for @service, method: :post do |f| %>
+  <%= f.input :title %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :cost %>
+  <%= f.submit "Book Now", class: "btn btn-dark" %>
+<%end %>
