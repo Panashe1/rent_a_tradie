@@ -1,7 +1,13 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!
+  def index
+    @bookings = Booking.all
+  end
+
   def new
     @service = Service.find(params[:service_id])
-    @booking = Booking.new
+    @booking = Booking.new(booking_params)
+    @booking.service = @service
   end
 
   def create
