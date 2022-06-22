@@ -1,0 +1,11 @@
+<h1>Bookings Confirmation Page</h1>
+<p>This page is created for testing purposes to view all new bookings and who they are assigned to</p>
+<% @bookings.each do |booking| %>
+  <p>---------------</p>
+  <p>Start date<%= booking.start_date %></p>
+  <p>End date:<%= booking.end_date %></p>
+  <p>Comments: <%= booking.comments %></p>
+  <p>Service ID: <%= booking.service_id %></p>
+  <p>user ID: <%= booking.user_id %></p>
+  <p>---------------</p>
+<% end %>
