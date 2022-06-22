@@ -14,11 +14,16 @@
     <div class="h-100 p-5 bg-light border rounded-3">
       <h2>Booking Confirmation Details</h2>
       <p>Booking Confirmation: DZ-<%= rand(1000..9000)%></p>
-      <p>Booking Confirmation: <%= @booking.start_date || "TBC" %></p>
-      <p>Start date: <%= @booking.end_date || "TBC" %></p>
-      <p>End date: <%= @booking.start_date || "TBC" %></p>
+      <p>Start date: <%= @booking.start_date || "TBC" %></p>
+      <p>End date: <%= @booking.end_date || "TBC" %></p>
       <p>Notes: <%= @booking.comments|| "N/A" %></p>
       <p>Tradie ID number: <%= @booking.service_id|| "N/A" %></p>
     </div>
   </div>
 </div>
+<% Booking.create(
+start_date: @booking.start_date,
+end_date: @booking.end_date,
+comments: @booking.comments,
+service_id: @booking.service_id,
+user_id: current_user.id) %>
