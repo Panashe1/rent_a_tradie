@@ -41,8 +41,8 @@
   </div>
   <div class='col mt-2 border py-3 bg-white text-dark'>
     <%= simple_form_for [@service, @booking], method: :post do |f| %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
+      <%= f.input :start_date, as: :date, html5: true %>
+      <%= f.input :end_date, as: :date, html5: true %>
       <%= f.input :comments %>
       <%= f.submit "Book Now", class: "btn btn-dark" %>
     <%end %>
