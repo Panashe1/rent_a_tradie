@@ -1,13 +1,16 @@
 class ServicesController < ApplicationController
+  before_action :authenticate_user!
 
   def new
     @service = Service.new
+
   end
 
   def create
     @service = Service.new(service_params)
+
     if @service.save
-      redirect_to services_path
+      redirect_to root_path
     else
       render :new
     end
@@ -24,13 +27,13 @@ class ServicesController < ApplicationController
 
   def update
     find_service
-    @service.update(service_params);
+    @service.update(service_params)
   end
 
   def destroy
     find_service
     @service.destroy
-    redirect_to services_path
+    redirect_to root_path
   end
 
   private
