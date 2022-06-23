@@ -1,7 +1,7 @@
 <h2 class="pb-2 mb-5 border-bottom">Booking confirmed 🎉</h2>
 <div class='row'>
   <div class='col-8'>
-    <div class="h-100 p-5 bg-light border rounded-3">
+    <div class="h-100 p-5 bg-light border rounded-3 bookings-relative">
       <h2>What happens now?</h2>
       <img src="https://res.cloudinary.com/dh8a307rs/image/upload/v1655820513/brick_knbeei.png" class='moving-booking-image'>
       <p >Your tradie will make contact between your prefered dates to set up a time to attend your property should you have any questions regarding your booking, we ask that you contact the tradie directly.</p>
@@ -19,6 +19,12 @@
       <p>Notes: <%= @booking.comments|| "N/A" %></p>
       <p>Tradie ID number: <%= @booking.service_id|| "N/A" %></p>
     </div>
+  </div>
+</div>
+<hr>
+<div class='row mt-5'>
+  <div class='col'>
+    <a href="/users/<%=current_user.id %>" class="btn btn-success">Go to user profile</a>
   </div>
 </div>
 <% Booking.create(
