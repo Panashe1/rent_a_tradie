@@ -6,10 +6,12 @@
     <h1 class="display-5 fw-bold lh-1 mb-3 m-1">Rent-A-Tradie</h1>
     <p class="lead m-1 mb-3">A platform to bring everyday people together to make the task of completing around the home chores quickly, but also pleasing to the hip pocket by removing the costs of marketing and operating a business for the tradie. </p>
     <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="enter category..." aria-label="tradie" aria-describedby="button-addon2">
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
-      </div>
+      <% if user_signed_in? %>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="enter category..." aria-label="tradie" aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        </div>
+      <% end  %>
     </div>
   </div>
 </div>
