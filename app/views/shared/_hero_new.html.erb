@@ -7,10 +7,12 @@
     <p class="lead m-1 mb-3">A platform to bring everyday people together to make the task of completing around the home chores quickly and cheaply! </p>
     <div class="d-grid gap-2 d-md-flex justify-content-md-start pb-3">
       <% if user_signed_in? %>
+        <%= form_tag root_path, method: :get do %>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="enter category..." aria-label="tradie" aria-describedby="button-addon2">
-          <button class="btn btn-outline-secondary text-white" type="button" id="button-addon2">Search</button>
+          <%= text_field_tag :category, params[:category], class: "form-control", placeholder: "Search service"%>
+          <%= submit_tag "Search", class: "btn btn-outline-secondary text-white" %>
         </div>
+        <% end %>
       <% end  %>
     </div>
   </div>

@@ -1,5 +1,11 @@
 class PagesController < ApplicationController
   def home
-    @services = Service.all
+    if params[:category].present?
+      @services = Service.where("category LIKE ?", "%#{params[:category].capitalize}%")
+    else
+      @services = Service.all
+    end
   end
+
+
 end
