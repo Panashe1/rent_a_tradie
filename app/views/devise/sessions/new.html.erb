@@ -1,7 +1,6 @@
 <div class="container log-in bg-white py-5 border border-dark shadow-sm p-3 mb-5 rounded mt-5">
   <div class="login-img">
-    <%= cl_image_tag("https://res.cloudinary.com/dytgnd0qv/image/upload/v1655807923/plumber_ocbtz4.png",
-  width: 50, height: 50, crop: :fill) %>
+    <img src='https://res.cloudinary.com/dytgnd0qv/image/upload/v1655807923/plumber_ocbtz4.png' class='icon-image'>
   </div>
   <h2>Rent A Tradie</h2>
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
