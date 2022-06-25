@@ -1,10 +1,18 @@
-<div class="container mt-5">
-  <%= simple_form_for @service, method: :post do |f| %>
-    <%= f.input :title %>
-    <%= f.input :category %>
-    <%= f.input :description %>
-    <%= f.input :cost %>
-    <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
-    <%= f.submit "Book Now", class: "btn btn-dark" %>
-  <%end %>
+<div class="container mt-5 service">
+  <div class="container service-new bg-white py-5 border border-dark shadow-sm p-3 mb-5 rounded">
+  <h2>Post your service</h2>
+      <div class="login-img">
+        <%= cl_image_tag("plumber_ocbtz4",
+        width: 50, height: 50, crop: :fill) %>
+      </div>
+    <%= simple_form_for @service, method: :post do |f| %>
+      <%= f.input :title %>
+      <%= f.input :category, :collection => %w[Electrician Plumber Gardener Woodwork Handyman Mover Painter]%>
+      <%= f.input :description, as: :text, :input_html => { :rows => 6 }%>
+      <%= f.input :cost %>
+      <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
+      <hr>
+      <%= f.submit "Post Now", class: "btn btn-service btn-outline-dark service-btn" %>
+    <%end %>
+  </div>
 </div>
