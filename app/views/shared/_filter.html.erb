@@ -34,7 +34,9 @@
           <%= link_to "Mover", "/?category=mover&commit=Search", class: "block text-decoration-none text-muted" %>
         </li>
         <li>
-          <%= link_to "CLEAR", "/", class: "btn btn-dark btn-sm" %>
+          <%   if params[:category].present? %>
+            <%= link_to "CLEAR", "/", class: "btn btn-dark btn-sm" %>
+          <% end %>
         </li>
       </ul>
     </div>
