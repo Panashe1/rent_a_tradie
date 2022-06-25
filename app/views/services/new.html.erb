@@ -1,7 +1,10 @@
-   <%= simple_form_for @service, method: :post do |f| %>
-  <%= f.input :title %>
-  <%= f.input :category %>
-  <%= f.input :description %>
-  <%= f.input :cost %>
-  <%= f.submit "Book Now", class: "btn btn-dark" %>
-<%end %>
+<div class="container mt-5">
+  <%= simple_form_for @service, method: :post do |f| %>
+    <%= f.input :title %>
+    <%= f.input :category %>
+    <%= f.input :description %>
+    <%= f.input :cost %>
+    <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
+    <%= f.submit "Book Now", class: "btn btn-dark" %>
+  <%end %>
+</div>

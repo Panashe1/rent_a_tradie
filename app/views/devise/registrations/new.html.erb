@@ -1,3 +1,8 @@
+<div class="container log-in bg-white py-5 border border-dark shadow-sm p-3 mb-5 rounded">
+<div class="login-img">
+    <%= cl_image_tag("plumber_ocbtz4",
+      width: 50, height: 50, crop: :fill) %>
+</div>
 <h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -18,8 +23,8 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign up", class: "btn btn-outline-dark sgn-up" %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</div>

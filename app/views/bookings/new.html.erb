@@ -1,35 +1,38 @@
-<h2 class="pb-2 mb-5 border-bottom">Booking confirmed 🎉</h2>
-<div class='row'>
-  <div class='col-8'>
-    <div class="h-100 p-5 bg-light border rounded-3 bookings-relative">
-      <h2>What happens now?</h2>
-      <img src="https://res.cloudinary.com/dh8a307rs/image/upload/v1655820513/brick_knbeei.png" class='moving-booking-image'>
-      <p >Your tradie will make contact between your prefered dates to set up a time to attend your property should you have any questions regarding your booking, we ask that you contact the tradie directly.</p>
-      <p class='fw-bold'>Booking changes can be made from your profile page.</p>
-      <p>Once the works have been completed, we ask that you take some time to leave a review for your tradie, as this helps others choose who to book and keep the platform safe</p>
-      <p>🚧It is important to remember that this booking is subject to be canceled without notice due to factors outside the control of Rent-A-Tradie and thefore do not take any responsbility🚧</p>
+ 
+<div class="container mt-5">
+  <h2 class="pb-2 mb-5 border-bottom">Booking confirmed 🎉</h2>
+  <div class='row'>
+    <div class='col-8'>
+      <div class="h-100 p-5 bg-light border rounded-3 bookings-relative">
+        <h2>What happens now?</h2>
+        <img src="https://res.cloudinary.com/dh8a307rs/image/upload/v1655820513/brick_knbeei.png" class='moving-booking-image'>
+        <p >Your tradie will make contact between your prefered dates to set up a time to attend your property should you have any questions regarding your booking, we ask that you contact the tradie directly.</p>
+        <p class='fw-bold'>Booking changes can be made from your profile page.</p>
+        <p>Once the works have been completed, we ask that you take some time to leave a review for your tradie, as this helps others choose who to book and keep the platform safe</p>
+        <p>🚧It is important to remember that this booking is subject to be canceled without notice due to factors outside the control of Rent-A-Tradie and thefore do not take any responsbility🚧</p>
+      </div>
+    </div>
+    <div class='col'>
+      <div class="h-100 p-5 bg-light border rounded-3">
+        <h2>Booking Confirmation Details</h2>
+        <p>Booking Confirmation: DZ-<%= rand(1000..9000)%></p>
+        <p>Start date: <%= @booking.start_date || "TBC" %></p>
+        <p>End date: <%= @booking.end_date || "TBC" %></p>
+        <p>Notes: <%= @booking.comments|| "N/A" %></p>
+        <p>Tradie ID number: <%= @booking.service_id|| "N/A" %></p>
+      </div>
     </div>
   </div>
-  <div class='col'>
-    <div class="h-100 p-5 bg-light border rounded-3">
-      <h2>Booking Confirmation Details</h2>
-      <p>Booking Confirmation: DZ-<%= rand(1000..9000)%></p>
-      <p>Start date: <%= @booking.start_date || "TBC" %></p>
-      <p>End date: <%= @booking.end_date || "TBC" %></p>
-      <p>Notes: <%= @booking.comments|| "N/A" %></p>
-      <p>Tradie ID number: <%= @booking.service_id|| "N/A" %></p>
+  <hr>
+  <div class='row mt-5'>
+    <div class='col'>
+      <a href="/users/<%=current_user.id %>" class="btn btn-success">Go to user profile</a>
     </div>
   </div>
+  <% Booking.create(
+  start_date: @booking.start_date,
+  end_date: @booking.end_date,
+  comments: @booking.comments,
+  service_id: @booking.service_id,
+  user_id: current_user.id) %>
 </div>
-<hr>
-<div class='row mt-5'>
-  <div class='col'>
-    <a href="/users/<%=current_user.id %>" class="btn btn-success">Go to user profile</a>
-  </div>
-</div>
-<% Booking.create(
-start_date: @booking.start_date,
-end_date: @booking.end_date,
-comments: @booking.comments,
-service_id: @booking.service_id,
-user_id: current_user.id) %>
