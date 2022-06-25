@@ -10,7 +10,7 @@ class ServicesController < ApplicationController
     @service = Service.new(service_params)
 
     if @service.save
-      redirect_to root_path
+      redirect_to "/users/#{current_user.id}"
     else
       render :new
     end
