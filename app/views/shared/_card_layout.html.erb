@@ -1,7 +1,7 @@
 <ul class = "services-list">
   <% services.each do |service| %>
     <li class = "service-item">
-      <div class = "service-image"></div>
+      <%= cl_image_tag "#{service.photo.key}", class: "service-image"%>
       <div class = "service-header">
         <div class = "service-title"><%= service.title %></div>
         <div class = "service-category"><%= service.category %></div>

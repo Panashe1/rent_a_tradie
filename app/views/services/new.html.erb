@@ -2,14 +2,14 @@
   <div class="container service-new bg-white py-5 border border-dark shadow-sm p-3 mb-5 rounded">
   <h2>Post your service</h2>
       <div class="login-img">
-        <%= cl_image_tag("plumber_ocbtz4",
-        width: 50, height: 50, crop: :fill) %>
+      <img class="service-img" src="https://res.cloudinary.com/dytgnd0qv/image/upload/v1656313489/plumber_jzuba7.png" alt="">
       </div>
     <%= simple_form_for @service, method: :post do |f| %>
       <%= f.input :title %>
       <%= f.input :category, :collection => %w[Electrician Plumber Gardener Woodwork Handyman Mover Painter]%>
-      <%= f.input :description, as: :text, :input_html => { :rows => 6 }%>
+      <%= f.input :description, as: :text, :input_html => { :rows => 3 }%>
       <%= f.input :cost %>
+      <%= f.input :photo, as: :file %>
       <%= f.input :user_id, as: :hidden, input_html: { value: current_user.id } %>
       <hr>
       <%= f.submit "Post Now", class: "btn btn-service btn-outline-dark service-btn" %>
