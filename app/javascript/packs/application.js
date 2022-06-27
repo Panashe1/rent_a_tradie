@@ -15,3 +15,6 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+
+import { appearOnScroll } from "./components/cardsAnimation";
+appearOnScroll();
