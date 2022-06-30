@@ -18,3 +18,7 @@ import "bootstrap"
 
 import { appearOnScroll } from "./components/cardsAnimation";
 appearOnScroll();
+document.onload = (event) => {
+  console.log('page is fully loaded');
+
+};

@@ -152,6 +152,7 @@
                         <td><%= item.start_date %></td>
                         <td><%= item.end_date %></td>
                         <td><%= item.comments %></td>
+                        <td><%= link_to "Delete", booking_path(item.id), class: 'btn link-danger', method: :delete%></td>
                       </tr>
                     <% end %>
                   <% end %>

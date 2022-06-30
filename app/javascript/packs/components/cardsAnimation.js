@@ -32,17 +32,14 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
       const linkHtml = link.innerHTML;
       console.log(linkHtml);
       if (!linkHtml) {
-        return "";
+        return;
       }
-
       if (linkHtml === "CLEAR") return window.location.replace(`/`);
       if (linkHtml === "Handyman") {
         return window.location.replace(`/?category=Handy&commit=Search`);
       }
-      if (linkHtml) {
-        window.location.reload();
-        window.location.replace(`/?category=${linkHtml}&commit=Search`);
-      }
+      window.location.reload();
+      window.location.replace(`/?category=${linkHtml}&commit=Search`);
     });
   });
 
