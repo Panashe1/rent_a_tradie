@@ -4,20 +4,7 @@
     <div class="col">
       <%= render "shared/pill_sm" %>
     </div>
-    <div class='col-12 align-self-end'>
-      <img src='https://res.cloudinary.com/dh8a307rs/image/upload/v1655791793/happy_cgmorw.png' class='happy-show-image'>
-      <div class="card">
-        <div class="card-header">
-          Reviews
-        </div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p>A well-known, reliable local for all your around the house jobs.</p>
-            <footer class="blockquote-footer">Local Tradie <cite title="Source Title"><%= @service.title %></cite></footer>
-          </blockquote>
-        </div>
-      </div>
-    </div>
+
   </div>
   <hr>
   <div class='row'>
@@ -49,6 +36,22 @@
       <%end %>
     </div>
   </div>
+    <div class='col-12 align-self-end'>
+      <img src='https://res.cloudinary.com/dh8a307rs/image/upload/v1655791793/happy_cgmorw.png' class='happy-show-image'>
+    </div>
+
+  <div class="card mt-5">
+
+        <div class="card-header">
+          Reviews
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>A well-known, reliable local for all your around the house jobs.</p>
+            <footer class="blockquote-footer">Local Tradie <cite title="Source Title"><%= @service.title %></cite></footer>
+          </blockquote>
+        </div>
+      </div>
 </div>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -87,7 +90,3 @@
     </div>
   </div>
 </div>
-
-
-<%= cl_image_tag("oIpwxeeSPy1cnwYpqJ1w_Dufer_Collateral_test_wovmmp",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>

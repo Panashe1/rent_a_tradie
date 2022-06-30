@@ -21,3 +21,4 @@ import LoadScroll from "./components/cardsAnimation";
 document.addEventListener("turbolinks:load", () => {
   LoadScroll();
 });
+
