@@ -33,7 +33,8 @@ class ServicesController < ApplicationController
   def destroy
     find_service
     @service.destroy
-    redirect_to root_path
+    redirect_to "/users/#{current_user.id}"
+
   end
 
   private

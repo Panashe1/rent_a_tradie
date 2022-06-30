@@ -121,6 +121,8 @@
                             <td><%= item.title %></td>
                             <td><%= item.description %></td>
                             <td><%= item.cost %></td>
+                            <td><%= link_to "Delete", service_path(item.id), class: 'btn link-danger', method: :delete%></td>
+
                           </tr>
                         <% end %>
                       <% end %>
