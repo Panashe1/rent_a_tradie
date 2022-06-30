@@ -7,35 +7,35 @@
       <ul class="navbar-nav">
         <li>
           <i class="fa-solid fa-bolt"></i>
-          <%= link_to "Electrician", "/?category=electric&commit=Search", class: "block text-decoration-none text-muted bold" %>
+          <%= link_to "Electrician", "/?category=electric&commit=Search", class: "block text-decoration-none text-muted bold js-refresh" %>
         </li>
         <li>
           <i class="fa-solid fa-toilet"></i>
-          <%= link_to "Plumber", "/?category=plumber&commit=Search", class: "block text-decoration-none text-muted" %>
+          <%= link_to "Plumber", "/?category=plumber&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
         </li>
         <li>
           <i class="fa-solid fa-leaf"></i>
-          <%= link_to "Gardener", "/?category=garden&commit=Search", class: "block text-decoration-none text-muted" %>
+          <%= link_to "Gardener", "/?category=garden&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
         </li>
         <li>
           <i class="fa-solid fa-cubes"></i>
-          <%= link_to "Woodwork", "/?category=woodwork&commit=Search", class: "block text-decoration-none text-muted" %>
+          <%= link_to "Woodwork", "/?category=woodwork&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
         </li>
         <li>
           <i class="fa-solid fa-paint-roller"></i>
-          <%= link_to "Painter", "/?category=painter&commit=Search", class: "block text-decoration-none text-muted" %>
+          <%= link_to "Painter", "/?category=painter&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
         </li>
         <li>
           <i class="fa-solid fa-hand-fist"></i>
-          <%= link_to "Handy Man", "/?category=handy&commit=Search", class: "block text-decoration-none text-muted" %>
+          <%= link_to "Handy Man", "/?category=handy&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
         </li>
         <li>
           <i class="fa-solid fa-truck"></i>
-          <%= link_to "Mover", "/?category=mover&commit=Search", class: "block text-decoration-none text-muted" %>
+          <%= link_to "Mover", "/?category=mover&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
         </li>
         <li>
           <%   if params[:category].present? %>
-            <%= link_to "CLEAR", "/", class: "btn btn-dark-outline btn-sm mt-2" %>
+            <%= link_to "CLEAR", "/", class: "btn btn-dark-outline btn-sm mt-2 js-refresh" %>
           <% end %>
         </li>
       </ul>
