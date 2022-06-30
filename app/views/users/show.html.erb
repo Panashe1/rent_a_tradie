@@ -121,7 +121,7 @@
                             <td><%= item.title %></td>
                             <td><%= item.description %></td>
                             <td><%= item.cost %></td>
-                            <td><%= link_to "Delete", service_path(item.id), class: 'btn link-danger', method: :delete%></td>
+                            <td><%= button_to "Delete", service_path(item.id), class: 'btn link-danger', method: :delete%></td>
 
                           </tr>
                         <% end %>
@@ -154,7 +154,7 @@
                         <td><%= item.start_date %></td>
                         <td><%= item.end_date %></td>
                         <td><%= item.comments %></td>
-                        <td><%= link_to "Delete", booking_path(item.id), class: 'btn link-danger', method: :delete%></td>
+                        <td><%= button_to "Delete", booking_path(item.id), class: 'btn link-danger', method: :delete%></td>
                       </tr>
                     <% end %>
                   <% end %>
