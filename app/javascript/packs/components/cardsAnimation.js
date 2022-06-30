@@ -10,8 +10,9 @@ const appearOptions = {
   //rootMargin: "0px 0px -10px 0px"
 };
 const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+  console.log("function call");
   entries.forEach(entry => {
-    if(!entry.isIntersecting) { //
+    if(!entry.isIntersecting) {
       return
     } else {
       entry.target.style.transitionDelay = `${entryCount * transitionDelay}s` ;
@@ -29,7 +30,6 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
 
   if (totalCount === faders.length) {
     setTimeout(() => {
-      console.log("ping");
       const visibleFaders = document.querySelectorAll(".fade-in")
       visibleFaders.forEach(fader => {
         fader.style.transitionDelay = `0s`;
