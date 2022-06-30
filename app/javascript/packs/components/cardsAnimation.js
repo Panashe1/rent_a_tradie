@@ -29,7 +29,9 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
 
   refreshLinks.forEach((link) => {
     return link.addEventListener("click", () => {
-      location.reload();
+      const linkHtml = link.innerHTML;
+      console.log(linkHtml);
+      window.location.replace(`/?category=${linkHtml}&commit=Search`);
     });
   });
 
