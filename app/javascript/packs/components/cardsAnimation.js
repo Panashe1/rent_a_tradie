@@ -31,6 +31,9 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     return link.addEventListener("click", () => {
       const linkHtml = link.innerHTML;
       console.log(linkHtml);
+      if (!linkHtml) {
+        return;
+      }
       if (linkHtml === "CLEAR") return window.location.replace(`/`);
       if (linkHtml === "Handyman") {
         return window.location.replace(`/?category=Handy&commit=Search`);
