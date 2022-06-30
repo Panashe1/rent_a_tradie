@@ -58,7 +58,7 @@ faders.forEach((fader) => {
   appearOnScroll.observe(fader);
 });
 
-export { appearOnScroll };
+export default cardsAnimation;
 
 /*
 
