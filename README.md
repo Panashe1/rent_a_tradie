@@ -1,10 +1,6 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+HOW TO START THIS APP
+bundle install
+yarn
+rails s
 
-
-FINAL PUSH
-
-
-Test push by Josh
-
-test branch
-
+You may need to rails create && rails migrate
