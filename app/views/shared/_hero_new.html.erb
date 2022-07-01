@@ -1,6 +1,6 @@
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5 bg-dark text-white">
   <div class="col-10 col-sm-8 col-lg-6">
-    <img src="https://res.cloudinary.com/dh8a307rs/image/upload/v1656038889/settings_ztcvmb.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" height="400" loading="lazy">
+    <img src="https://res.cloudinary.com/dh8a307rs/image/upload/v1656038889/settings_ztcvmb.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="300" height="300" loading="lazy">
   </div>
   <div class="col-lg-6 border border-white border-3">
     <h1 class="display-5 fw-bold lh-1 mb-3 m-1 pt-3">Rent-A-<span class='text-warning '>Tradie </span></h1>
@@ -8,10 +8,10 @@
     <div class="d-grid gap-2 d-md-flex justify-content-md-start pb-3">
       <% if user_signed_in? %>
         <%= form_tag root_path, method: :get do %>
-        <div class="input-group mb-3">
-          <%= text_field_tag :category, params[:category], class: "form-control", placeholder: "Search service"%>
-          <%= submit_tag "Search", class: "btn btn-outline-secondary text-white" %>
-        </div>
+          <div class="input-group mb-3">
+            <%= text_field_tag :category, params[:category], class: "form-control", placeholder: "Search service"%>
+            <%= submit_tag "Search", class: "btn btn-outline-secondary text-white" %>
+          </div>
         <% end %>
       <% end  %>
     </div>
