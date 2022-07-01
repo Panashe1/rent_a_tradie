@@ -25,7 +25,12 @@ body {
   width: 70px;
 }
 
-.icon-image {
-  width: 50px;
-  height: 50px;
+.relative-nav {
+  position: relative;
+}
+
+.little-man {
+  height: 60px;
+  position: absolute;
+  bottom: 3rem;
 }

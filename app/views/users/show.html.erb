@@ -81,87 +81,84 @@
 
   </div>
 </div> -->
-
-
 <div class="container rounded bg-white mt-5 mb-5">
-    <div class="row">
-        <div class="col-md-2 border-right border-dark border-end">
-            <div class="d-flex flex-column align-items-center p-3 py-5">
-              <img class="rounded-circle mt-5 border border-dark border-4 mb-3" width="150px" src="https://kitt.lewagon.com/placeholder/users/ssaunier">
-              <div>
-                <p class="font-weight-bold"><%= @user.first_name %> <%= @user.last_name %></p>
-                <p class="text-black-50"><%= @user.email %></p>
-                <p class="text-black-50"> 121 Johnson Street </p>
-                <p class="text-black-50"> 19/08/1990 </p>
-                <button class="btn btn-outline-secondary text-black" type="button">Update</button>
-              </div>
-            </div>
+  <div class="row">
+    <div class="col-md-2 border-right border-dark border-end">
+      <div class="d-flex flex-column align-items-center p-3 py-5">
+        <img class="rounded-circle mt-5 border border-dark border-4 mb-3" width="150px" src="https://res.cloudinary.com/dh8a307rs/image/upload/v1655277898/maleuser_qdddqv.jpg">
+        <div>
+          <p class="font-weight-bold"><%= @user.first_name %> <%= @user.last_name %></p>
+          <p class="text-black-50"><%= @user.email %></p>
+          <p class="text-black-50"> 121 Johnson Street </p>
+          <p class="text-black-50"> 19/08/1990 </p>
+          <button class="btn btn-outline-secondary text-black" type="button">Update</button>
         </div>
-        <div class="col-md-4 border-right border-dark border-end">
-            <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Services</h4>
-                    <%= link_to "Add", new_service_path, class: 'btn link-success' %>
-                </div>
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Cost</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <% @services.each do |item| %>
-                        <% if @user.id === item.user_id  %>
-                          <tr>
-                            <th scope="row"><%= item.id %></th>
-                            <td><%= item.title %></td>
-                            <td><%= item.description %></td>
-                            <td><%= item.cost %></td>
-                            <td><%= button_to "Delete", service_path(item.id), class: 'btn link-danger', method: :delete%></td>
-
-                          </tr>
-                        <% end %>
-                      <% end %>
-                    </tbody>
-                  </table>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-                <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Upcoming Bookings</h4>
-                </div>
-            <div class="table-responsive">
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Start date</th>
-                    <th scope="col">End date</th>
-                    <th scope="col">comments</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <% @bookings.each do |item| %>
-                    <% if item.user_id === current_user.id %>
-                      <tr>
-                        <th scope="row"><%= item.id %></th>
-                        <td><%= item.start_date %></td>
-                        <td><%= item.end_date %></td>
-                        <td><%= item.comments %></td>
-                        <td><%= button_to "Delete", booking_path(item.id), class: 'btn link-danger', method: :delete%></td>
-                      </tr>
-                    <% end %>
-                  <% end %>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+      </div>
     </div>
+    <div class="col-md-4 border-right border-dark border-end">
+      <div class="p-3 py-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="text-right">Services</h4>
+          <%= link_to "Add", new_service_path, class: 'btn link-success' %>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @services.each do |item| %>
+                <% if @user.id === item.user_id  %>
+                  <tr>
+                    <th scope="row"><%= item.id %></th>
+                    <td><%= item.title %></td>
+                    <td><%= item.description %></td>
+                    <td><%= item.cost %></td>
+                    <td><%= button_to "Delete", service_path(item.id), class: 'btn link-danger', method: :delete%></td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-3 py-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="text-right">Upcoming Bookings</h4>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Start date</th>
+                <th scope="col">End date</th>
+                <th scope="col">comments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @bookings.each do |item| %>
+                <% if item.user_id === current_user.id %>
+                  <tr>
+                    <th scope="row"><%= item.id %></th>
+                    <td><%= item.start_date %></td>
+                    <td><%= item.end_date %></td>
+                    <td><%= item.comments %></td>
+                    <td><%= button_to "Delete", booking_path(item.id), class: 'btn link-danger', method: :delete%></td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
