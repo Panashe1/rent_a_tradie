@@ -1,38 +1,53 @@
 <nav class="filter navbar navbar-expand-lg navbar-light mt-5 relative-nav" aria-label="Twelfth navbar example">
   <%= image_tag "https://res.cloudinary.com/dh8a307rs/image/upload/v1656660563/wall_nzy18u.png", class: "little-man" %>
+
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-md-center mt-2" id="navbarsExample10">
       <ul class="navbar-nav">
-        <li>
-          <i class="fa-solid fa-bolt"></i>
-          <%= link_to "Electrician", "/?category=electric&commit=Search", class: "block text-decoration-none text-muted bold js-refresh" %>
+        <li href=>
+          <a href="/?category=electric&commit=Search">
+            <i class="fa-solid fa-bolt text-black"></i>
+            <%= link_to "Electrician", "/?category=electric&commit=Search", class: "block text-decoration-none text-muted bold js-refresh" %>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-toilet"></i>
-          <%= link_to "Plumber", "/?category=plumber&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          <a href="/?category=plumber&commit=Search">
+            <i class="fa-solid fa-toilet text-black"></i>
+            <%= link_to "Plumber", "/?category=plumber&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-leaf"></i>
-          <%= link_to "Gardener", "/?category=garden&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          <a href="/?category=garden&commit=Search">
+            <i class="fa-solid fa-leaf text-black"></i>
+            <%= link_to "Gardener", "/?category=garden&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-cubes"></i>
-          <%= link_to "Woodwork", "/?category=woodwork&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          <a href="/?category=woodwork&commit=Search">
+            <i class="fa-solid fa-cubes text-black"></i>
+            <%= link_to "Woodwork", "/?category=woodwork&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-paint-roller"></i>
-          <%= link_to "Painter", "/?category=painter&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          <a href="/?category=painter&commit=Search">
+            <i class="fa-solid fa-paint-roller text-black"></i>
+            <%= link_to "Painter", "/?category=painter&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-hand-fist"></i>
+        <a href="/?category=handy&commit=Search">
+          <i class="fa-solid fa-hand-fist text-black"></i>
           <%= link_to "Handyman", "/?category=handy&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          </a>
         </li>
         <li>
-          <i class="fa-solid fa-truck"></i>
-          <%= link_to "Mover", "/?category=mover&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          <a href="/?category=mover&commit=Search">
+            <i class="fa-solid fa-truck text-black"></i>
+            <%= link_to "Mover", "/?category=mover&commit=Search", class: "block text-decoration-none text-muted js-refresh" %>
+          </a>
         </li>
         <li>
           <%   if params[:category].present? %>

@@ -83,19 +83,17 @@
 </div> -->
 <div class="container rounded bg-white mt-5 mb-5">
   <div class="row">
-    <div class="col-md-2 border-right border-dark border-end">
+    <div class="col-md-12 border-right bg-dark border-dark border-end">
       <div class="d-flex flex-column align-items-center p-3 py-5">
-        <img class="rounded-circle mt-5 border border-dark border-4 mb-3" width="150px" src="https://res.cloudinary.com/dh8a307rs/image/upload/v1655277898/maleuser_qdddqv.jpg">
-        <div>
-          <p class="font-weight-bold"><%= @user.first_name %> <%= @user.last_name %></p>
-          <p class="text-black-50"><%= @user.email %></p>
-          <p class="text-black-50"> 121 Johnson Street </p>
-          <p class="text-black-50"> 19/08/1990 </p>
-          <button class="btn btn-outline-secondary text-black" type="button">Update</button>
+        <img class="rounded-circle mt-5 border border-light border-4 mb-3" width="150px" src="https://res.cloudinary.com/dh8a307rs/image/upload/v1655277898/maleuser_qdddqv.jpg">
+        <div class="text-center">
+          <p class="font-weight-bold text-white fs-2"><%= @user.first_name %> <%= @user.last_name %></p>
+          <p class="text-white"><%= @user.email %></p>
+          <%# <button class="btn btn-outline-secondary text-black" type="button">Update</button> %>
         </div>
       </div>
     </div>
-    <div class="col-md-4 border-right border-dark border-end">
+    <div class="col-md-6 border-right border-dark border-end">
       <div class="p-3 py-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h4 class="text-right">Services</h4>
@@ -128,7 +126,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6 ">
       <div class="p-3 py-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h4 class="text-right">Upcoming Bookings</h4>

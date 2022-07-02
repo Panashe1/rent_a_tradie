@@ -8,10 +8,10 @@
   <hr>
   <div class='row'>
     <div class='col-8 border-secondary border-end border-5 m-3 bg-white text-dark'>
-      <h2 class='mt-2'><i class="fas fa-tools"></i><%= @service.title %></h2>
-      <p class='text-wrap' style="width: 30rem;">Come take a look! at John now!, he has a number of services available from general handyman to full bathroom makeovers! </p>
-      <p class='text-wrap' style="width: 30rem;">Average cost: $<%= @service.cost %> </p>
-      <div class="col align-self-end">
+      <h2 class='mt-4 ms-2 border border-top-0 border-start-0 border-end-0 border-dark'><i class="fas fa-tools me-2"></i><%= @service.title %></h2>
+      <p class='text-wrap ms-5 ' style="width: 30rem;"> <%=@service.description %> </p>
+      <p class='text-wrap ms-5' style="width: 30rem;">Average Cost: $<%= @service.cost %> </p>
+      <div class="col align-self-end ms-5 mt-5 mb-4">
         <img src='https://res.cloudinary.com/dh8a307rs/image/upload/v1656045382/IMG_3375_gylxro.webp' class='show-work-image' data-bs-toggle="modal" data-bs-target="#exampleModal">
         <img src='https://res.cloudinary.com/dh8a307rs/image/upload/v1656045441/service-today-plumber_eyflya.webp' class='show-work-image' data-bs-toggle="modal" data-bs-target="#exampleModal">
         <img src='https://res.cloudinary.com/dh8a307rs/image/upload/v1656046321/marian-florinel-condruz-C-oYJoIfgCs-unsplash_idh8df.jpg' class='show-work-image' data-bs-toggle="modal" data-bs-target="#exampleModal">

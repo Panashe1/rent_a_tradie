@@ -32,5 +32,8 @@ body {
 .little-man {
   height: 60px;
   position: absolute;
-  bottom: 3rem;
+  bottom: 0.5rem;
+  left:0.5rem;
+  border: 1px solid black;
+  border-radius: 50%;
 }
