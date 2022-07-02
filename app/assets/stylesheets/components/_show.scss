@@ -66,9 +66,16 @@
   opacity: 70%;
 }
 
+.happy-relative{
+position: relative;
+}
+
+
 .happy-show-image {
-  height: 80px;
+  height: 60px;
   position: absolute;
-  top: 130%;
-  right: 10%;
+  bottom: 85%;
+  right:0;
+  z-index: -2;
+
 }
