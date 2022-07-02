@@ -97,7 +97,7 @@
       <div class="p-3 py-5">
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h4 class="text-right">Services</h4>
-          <%= link_to "Add", new_service_path, class: 'btn link-success' %>
+          <%= link_to "Add", new_service_path, class: 'btn btn-outline-success hover-icon' %>
         </div>
         <div class="table-responsive">
           <table class="table table-striped">
@@ -117,7 +117,7 @@
                     <td><%= item.title %></td>
                     <td><%= item.description %></td>
                     <td><%= item.cost %></td>
-                    <td><%= button_to "Delete", service_path(item.id), class: 'btn link-danger', method: :delete%></td>
+                    <td><%= button_to "Delete", service_path(item.id), class: 'btn link-danger hover-icon', method: :delete%></td>
                   </tr>
                 <% end %>
               <% end %>
@@ -149,7 +149,7 @@
                     <td><%= item.start_date %></td>
                     <td><%= item.end_date %></td>
                     <td><%= item.comments %></td>
-                    <td><%= button_to "Delete", booking_path(item.id), class: 'btn link-danger', method: :delete%></td>
+                    <td><%= button_to "Delete", booking_path(item.id), class: 'btn link-danger hover-icon', method: :delete%></td>
                   </tr>
                 <% end %>
               <% end %>

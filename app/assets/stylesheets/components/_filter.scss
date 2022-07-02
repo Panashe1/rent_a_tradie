@@ -16,6 +16,14 @@
 
 
 li{
-
   margin-right: 10px;
+}
+
+.hover-icon{
+  transition: 0.3s;
+
+  &:hover{
+    transform: scale(1.25);
+  }
+
 }
